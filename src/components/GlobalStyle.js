@@ -12,7 +12,7 @@ html{
         font-size: 75%;
     }
     @media (max-width: 1300px){
-        font-size: 80%;
+        font-size: 70%;
     }
 }
 
