@@ -1,6 +1,9 @@
 import home1 from "../img/home1.png";
 
 import { useEffect } from "react";
+import { motion } from "framer-motion";
+import { titleAnim, fade, photoAnim } from "../animation";
+import Wave from "./Wave";
 
 import styled from "styled-components";
 import {
@@ -11,46 +14,32 @@ import {
 } from "../styles";
 
 const AboutSection = () => {
-  // My code
-  /* const rowAnimation = [{ transform: "translateY(100%)" }]; */
-  /*  const rowAnimDuration = { duration: 2000, iterations: 2 }; */
-  /* useEffect(() => {
-    const title = document.querySelectorAll(".title h2");
-    console.log(title);
-    let i = 0;
-
-    title.forEach((row) => {
-      row.animate(rowAnimation, { duration: 4000 });
-    });
-  }, []); */
-
-  // End of my code
-
   return (
     <StyledAbout>
       <StyledDescription>
         <div className='title'>
           <StyledHide>
-            <h2>We work to make</h2>
+            <motion.h2 variants={titleAnim}>We work to make</motion.h2>
           </StyledHide>
           <StyledHide>
-            <h2>
+            <motion.h2 variants={titleAnim}>
               your <span>dreams</span> come
-            </h2>
+            </motion.h2>
           </StyledHide>
           <StyledHide>
-            <h2>true.</h2>
+            <motion.h2 variants={titleAnim}>true.</motion.h2>
           </StyledHide>
         </div>
-        <p>
+        <motion.p variants={fade}>
           Contact us for any photography or videography ideas that you have. We
           have professionals with amazing skills.
-        </p>
-        <button>Contact Us</button>
+        </motion.p>
+        <motion.button variants={fade}>Contact Us</motion.button>
       </StyledDescription>
       <StyledImage>
-        <img src={home1} alt='guy with a camera' />
+        <motion.img variants={photoAnim} src={home1} alt='guy with a camera' />
       </StyledImage>
+      <Wave />
     </StyledAbout>
   );
 };
