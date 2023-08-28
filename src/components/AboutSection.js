@@ -1,5 +1,7 @@
 import home1 from "../img/home1.png";
 
+import { useEffect } from "react";
+
 import styled from "styled-components";
 import {
   StyledHide,
@@ -9,6 +11,21 @@ import {
 } from "../styles";
 
 const AboutSection = () => {
+  // My code
+  /* const rowAnimation = [{ transform: "translateY(100%)" }]; */
+  /*  const rowAnimDuration = { duration: 2000, iterations: 2 }; */
+  /* useEffect(() => {
+    const title = document.querySelectorAll(".title h2");
+    console.log(title);
+    let i = 0;
+
+    title.forEach((row) => {
+      row.animate(rowAnimation, { duration: 4000 });
+    });
+  }, []); */
+
+  // End of my code
+
   return (
     <StyledAbout>
       <StyledDescription>
