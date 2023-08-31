@@ -1,11 +1,9 @@
 import home1 from "../img/home1.png";
 
-import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { titleAnim, fade, photoAnim } from "../animation";
 import Wave from "./Wave";
 
-import styled from "styled-components";
 import {
   StyledHide,
   StyledAbout,

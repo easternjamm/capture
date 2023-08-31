@@ -1,5 +1,8 @@
 import { styled } from "styled-components";
 
+import { useScroll } from "./useScroll";
+import { fade } from "../animation";
+
 import clock from "../img/clock.svg";
 import diaphragm from "../img/diaphragm.svg";
 import money from "../img/money.svg";
@@ -9,8 +12,14 @@ import home2 from "../img/home2.png";
 import { StyledAbout, StyledDescription, StyledImage } from "../styles";
 
 const ServicesSection = () => {
+  const [element, controls] = useScroll();
   return (
-    <StyledServices>
+    <StyledServices
+      variants={fade}
+      animate={controls}
+      initial='hidden'
+      ref={element}
+    >
       <StyledDescription>
         <h2>
           High <span>quality</span> services
@@ -75,6 +84,9 @@ const StyledServices = styled(StyledAbout)`
 const StyledCards = styled.div`
   display: flex;
   flex-wrap: wrap;
+  @media (max-width: 1300px) {
+    justify-content: center;
+  }
 `;
 
 const StyledCard = styled.div`

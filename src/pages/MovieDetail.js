@@ -18,7 +18,6 @@ const MovieDetail = () => {
     const currentMovie = movies.filter((stateMovie) => stateMovie.url === url);
     setMovie(currentMovie[0]);
   }, [movies, url]);
-  console.log(movie);
 
   return (
     <>
@@ -78,6 +77,10 @@ const StyledAwards = styled.div`
   margin: 5rem 5rem;
   align-items: center;
   justify-content: space-around;
+  @media (max-width: 1300px) {
+    display: block;
+    margin: 2rem 2rem;
+  }
 `;
 
 const StyledAward = styled.div`
